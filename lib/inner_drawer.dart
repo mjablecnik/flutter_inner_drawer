@@ -1,3 +1,5 @@
+// Altered on 7/30/21 to provide a getter for current open state of Inner Drawer.
+
 // InnerDrawer is based on Drawer.
 // The source code of the Drawer has been re-adapted for Inner Drawer.
 
@@ -358,6 +360,9 @@ class InnerDrawerState extends State<InnerDrawer>
     else
       open(direction: direction);
   }
+
+  /// Check status of InnerDrawer
+  bool get opened => _previouslyOpened;
 
   final GlobalKey _gestureDetectorKey = GlobalKey();
 
