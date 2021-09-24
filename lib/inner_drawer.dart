@@ -1,5 +1,6 @@
 // Altered on 7/30/21 to provide a getter for current open state of Inner Drawer.
 // Altered on 09/24/2021 to support negative horizontal offset.
+// Alerted on 09/24/2021 to support devices with narrow screen widths.
 
 // InnerDrawer is based on Drawer.
 // The source code of the Drawer has been re-adapted for Inner Drawer.
