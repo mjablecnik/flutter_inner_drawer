@@ -229,7 +229,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
                           data: Theme.of(context).sliderTheme.copyWith(
                                 valueIndicatorTextStyle: Theme.of(context)
                                     .accentTextTheme
-                                    .body2
+                                    .bodyText2
                                     .copyWith(color: Colors.white),
                               ),
                           child: Slider(
@@ -318,7 +318,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
                           data: Theme.of(context).sliderTheme.copyWith(
                                 valueIndicatorTextStyle: Theme.of(context)
                                     .accentTextTheme
-                                    .body2
+                                    .bodyText2
                                     .copyWith(color: Colors.white),
                               ),
                           child: Slider(
@@ -360,7 +360,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
                           data: Theme.of(context).sliderTheme.copyWith(
                                 valueIndicatorTextStyle: Theme.of(context)
                                     .accentTextTheme
-                                    .body2
+                                    .bodyText2
                                     .copyWith(color: Colors.white),
                               ),
                           child: Slider(
@@ -399,7 +399,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
                           data: Theme.of(context).sliderTheme.copyWith(
                                 valueIndicatorTextStyle: Theme.of(context)
                                     .accentTextTheme
-                                    .body2
+                                    .bodyText2
                                     .copyWith(color: Colors.white),
                               ),
                           child: Slider(
