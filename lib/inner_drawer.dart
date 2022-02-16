@@ -1,3 +1,7 @@
+// Altered on 7/30/21 to provide a getter for current open state of Inner Drawer.
+// Altered on 09/24/2021 to support negative horizontal offset.
+// Alerted on 09/24/2021 to support devices with narrow screen widths.
+
 // InnerDrawer is based on Drawer.
 // The source code of the Drawer has been re-adapted for Inner Drawer.
 
@@ -259,7 +263,7 @@ class InnerDrawerState extends State<InnerDrawer>
       if (box != null &&
           box.hasSize &&
           box.size != null &&
-          box.size.width > 300)
+          box.size.width > 250)
         setState(() {
           _initWidth = box.size.width;
         });
@@ -280,16 +284,7 @@ class InnerDrawerState extends State<InnerDrawer>
         ? widget.offset.left
         : widget.offset.right;
 
-    double ee = 1;
-    if (offset <= 0.2)
-      ee = 1.7;
-    else if (offset <= 0.4)
-      ee = 1.2;
-    else if (offset <= 0.6) ee = 1.05;
-
-    offset = 1 -
-        (pow(offset / ee, 1 / 2)
-            as double); //(num.parse(pow(offset/2,1/3).toStringAsFixed(1)));
+    offset = exp(-2.05 * offset) as double;
 
     switch (_position) {
       case InnerDrawerDirection.end:
@@ -358,6 +353,9 @@ class InnerDrawerState extends State<InnerDrawer>
     else
       open(direction: direction);
   }
+
+  /// Check status of InnerDrawer
+  bool get opened => _previouslyOpened;
 
   final GlobalKey _gestureDetectorKey = GlobalKey();
 
